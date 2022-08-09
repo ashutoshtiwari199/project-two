@@ -20,12 +20,15 @@
 </head>
 <body>
     <section class="container-fluid">
+        <i class="fa-solid fa-bars menu"></i>
+        <i class="fa-solid fa-xmark cross hide"></i>
+
         <!-- Navabar -->
-        <nav>
-            <img src="./assets/logo.png" alt="" srcset="">
+        <nav class="nav-show " >
+            <img src="https://ik.imagekit.io/yix6plf6z/project15/logo_kX0diARcL.png?ik-sdk-version=javascript-1.4.3&updatedAt=1660079119688" alt="" srcset="">
             <div class="nav-menu">
                 <ul class="nav-menu-list">
-                    <li class="list-item" id="home"><a href="#home">Home</a> </li>
+                    <li class="list-item"><a href="#home">Home</a> </li>
                     <li class="list-item"><a href="#project">Project</a></li>
                     <li class="list-item"><a href="#about">About</a></li>
                     <li class="list-item"><a href="#contact">Contact</a></li>
@@ -34,7 +37,7 @@
             </div>
         </nav>
         <!-- Hero Section -->
-        <div class="hero-section">
+        <div id="home" class="hero-section">
             <div class="hero-img-div">
 
             </div>
@@ -52,7 +55,7 @@
             </div>
             <div id="other-page" class="services-offered">
                 <div class="ui-design">
-                    <img src="./assets/ui_design.PNG" alt="">
+                    <img src="https://ik.imagekit.io/yix6plf6z/project15/ui_design_uKVQi6lfx.PNG?ik-sdk-version=javascript-1.4.3&updatedAt=1660079118580" alt="">
                     <h2>UI Design</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                     <span>KNOW MORE</span>
@@ -60,14 +63,14 @@
 
                 </div>
                 <div class="product-design">
-                    <img src="./assets/product_design.PNG" alt="">
+                    <img src="https://ik.imagekit.io/yix6plf6z/project15/product_design_qAlbeXbAb.PNG?ik-sdk-version=javascript-1.4.3&updatedAt=1660079118186" alt="">
                     <h2>Product Design</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                     <span>KNOW MORE</span>
                     <i class="fa-solid fa-arrow-right"></i>
                 </div>
                 <div class="branding">
-                    <img src="./assets/branding.PNG" alt="">
+                    <img src="https://ik.imagekit.io/yix6plf6z/project15/branding_w7AEXtVwB.PNG?ik-sdk-version=javascript-1.4.3&updatedAt=1660079120131" alt="">
                     <h2>Branding</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                     <span>KNOW MORE</span>
@@ -117,7 +120,7 @@
             <div class="featured-display-one">
                 <div class="display-the-vintage">
                     <div class="display-img-div">
-                        <img src="./assets/prj_15_img_1.png" alt="" srcset="">
+                        <img src="https://ik.imagekit.io/yix6plf6z/project15/prj_15_img_1_FByKbrula.png?ik-sdk-version=javascript-1.4.3&updatedAt=1660079116335" alt="" srcset="">
                     </div>
                     <h3>The Vintage</h3>
                     <span>KNOW MORE</span>
@@ -125,7 +128,7 @@
                 </div>
                 <div class="display-foodasa">
                     <div class="display-img-div">
-                        <img src="./assets/prj_15_img_2.png" alt="" srcset="">
+                        <img src="https://ik.imagekit.io/yix6plf6z/project15/prj_15_img_2_CQvG0MzHe.png?ik-sdk-version=javascript-1.4.3&updatedAt=1660079116723" alt="" srcset="">
                     </div>
                     <h3>Foodasa</h3>
                     <span>KNOW MORE</span>
@@ -136,7 +139,7 @@
             <div class="featured-display-two">
                 <div class="display-macro-accent">
                     <div class="display-img-div">
-                        <img src="./assets/prj_15_img_3.png" alt="" srcset="">
+                        <img src="https://ik.imagekit.io/yix6plf6z/project15/prj_15_img_3_hDu35jjfsg.png?ik-sdk-version=javascript-1.4.3&updatedAt=1660079117069" alt="" srcset="">
                     </div>
                     <h3>Macro Accent</h3>
                     <span>KNOW MORE</span>
@@ -144,7 +147,7 @@
                 </div>
                 <div class="display-mozaik">
                     <div class="display-img-div">
-                        <img src="./assets/prj_15_img_4.png" alt="" srcset="">
+                        <img src="https://ik.imagekit.io/yix6plf6z/project15/prj_15_img_4_eMBwY-r6q.png?ik-sdk-version=javascript-1.4.3&updatedAt=1660079117043" alt="" srcset="">
                     </div>
                     <h3>Mozaik</h3>
                     <span>KNOW MORE</span>
@@ -173,7 +176,7 @@
         </div>
         <!-- Footer -->
         <footer>
-            <img src="./assets/footer_logo.PNG" alt="" srcset="">
+            <img src="https://ik.imagekit.io/yix6plf6z/project15/footer_logo_PRTpuzNTX.PNG?ik-sdk-version=javascript-1.4.3&updatedAt=1660079120260" alt="" srcset="">
             <div class="social-links">
                 <i class="fa-brands fa-facebook-f"></i>
                 <i class="fa-brands fa-twitter"></i>
@@ -182,5 +185,22 @@
         </footer>
         
     </section>
+    <script>
+
+        let cross = document.querySelector('.cross')
+        let navigation = document.querySelector('.nav-show')
+        let burgerMenu = document.querySelector('.menu')
+        cross.addEventListener('click',()=>{
+            cross.classList.add('hide')
+            navigation.classList.remove('show')
+        })
+
+        burgerMenu.addEventListener('click',()=>{
+            navigation.classList.add('show')
+            burgerMenu.classList.add('.hide')
+            cross.classList.remove('hide')
+        })
+
+    </script>
 </body>
 </html>
